@@ -13,7 +13,11 @@
   <body>
     <div class="container">
     <div class="TopBar">
-        <h1>Welcome!</h1>
+        <video width="320" autoplay playsinline loop controls>
+            <source src="Media/todaysgonnabe.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+</video>
+
     </div>
         <a href="index.html">Home</a>
         <a href="FlashLibrary.html">Flash Library</a>
@@ -50,13 +54,14 @@
 </body>
     <script>
           
-        let Splashtxt = ["Fuck Edgar", "Yo... gurt", "I damn Rich Preece to eternal damnation", "I just wanted to see tung tung tung sahur one last time", " (Funny splash text goes here)", "Happy birthday patrick!!!", "Do you realize, do you realize something...", "Also try Terraria!", "AIPAC free!", "GLORY TO ISREAL - Marco", "Can the admins stop blocking this in technicality this educational."];
+        let Splashtxt = ["Fuck Edgar", "Yo... gurt", "I damn Rich Preece to eternal damnation", "I just wanted to see tung tung tung sahur one last time", " (Funny splash text goes here)", "Happy birthday patrick!!!", "Do you realize, do you realize something...", "Also try Terraria!", "AIPAC free!", "GLORY TO ISREAL - Marco", "Can the admins stop blocking this in technicality this educational.",'this school is tung tung sahorrible!', "get rid of yo gurt this not funny", "dattebayo", "Ahhh, todays gonna be a great day!"];
         let TxtId = Math.floor(Math.random() * (Splashtxt.length - 1 + 1)) + 1;
         const container = document.getElementById("SplashtxtBar");
         container.innerHTML = "<p1>" + Splashtxt[TxtId] + "</p1>";
         setInterval(() => {
           TxtId = Math.floor(Math.random() * (Splashtxt.length - 1 + 1)) + 1;
           container.innerHTML = "<p1>" + Splashtxt[TxtId] + "</p1>";
+          console.log(TxtId)
         }, 5000);
         
         /*  
@@ -85,12 +90,14 @@
         */
         let ImgId = Math.floor(Math.random() * (12 - 1 + 1)) + 1;
         const imgcontainer = document.getElementById("Randimg");
-        let imgarray = ["Media/Catimgs/blails.jpg", "Media/Catimgs/Doo_Doo_Fart.png", "Media/Catimgs/Dietzen_D._Dinklebottom.png", "Media/Catimgs/image.png", "Media/Catimgs/IMG_0789.jpeg", "Media/Catimgs/Screenshot 2026-03-12 11.21.45 AM.png", "Media/Catimgs/unnamed (1).png", "Media/Catimgs/unnamed (2).png", "Media/Catimgs/unnamed (3).png", "Media/Catimgs/unnamed.png", "Media/Catimgs/image_100.jpg"];
+        let imgarray = ["Media/Catimgs/blails.jpg", "Media/Catimgs/Doo_Doo_Fart.png", "Media/Catimgs/Dietzen_D._Dinklebottom.png", "Media/Catimgs/image.png", "Media/Catimgs/IMG_0789.jpeg", "Media/Catimgs/Screenshot 2026-03-12 11.21.45 AM.png", "Media/Catimgs/unnamed (1).png", "Media/Catimgs/unnamed (2).png", "Media/Catimgs/unnamed (3).png", "Media/Catimgs/unnamed.png", "Media/Catimgs/image_100.jpg","Media/Catimgs/theanoinotng.gif", "Media/Catimgs/Arthur (1).jpg"];
+
         imgcontainer.src = imgarray[ImgId];
          setInterval(() => {
-          ImgId = Math.floor(Math.random() * (12 - 1 + 1)) + 1;
+          ImgId = Math.floor(Math.random() * (imgarray.length - 1 + 1)) + 1;
           imgcontainer.src = imgarray[ImgId];
-        }, 7000);
+          console.log(ImgId)
+        }, 3000);
         
         /*
         if (ImgId == 1) {
